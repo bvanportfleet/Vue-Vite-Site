@@ -7,17 +7,18 @@
       <h1 style="text-align: left">Brian VanPortfleet</h1>
       <p>
         Certified full-stack developer with a specialization in
-        <strong>React</strong> and Vue with over two decades of expertise in
-        website management, IIS server administration, and domain name
-        acquisitions, management, and domain transitions. Proficient in SEO,
-        secure certificate handling, and ADA compliance, with a strong
+        <strong>React</strong> and <strong>Vue</strong> with over two decades of
+        expertise in website management, IIS server administration, and domain
+        name acquisitions, management, and domain transitions. Proficient in
+        SEO, secure certificate handling, and ADA compliance, with a strong
         capability in transitioning old web applications to more modern Node.js
-        frameworks/libraries like .NET, Angular, React, NextJS and Vue. Also an
-        expert in HTML, CSS, SQL, and various design tools such as Photoshop,
-        Illustrator, and InDesign. Possessing a strong marketing and advertising
-        background, aiming for a senior role to leverage my extensive experience
-        in driving efficient web system management, complemented by compelling
-        visual design and robust database solutions.
+        frameworks/libraries like
+        <strong>.NET, Angular, React, NextJS and Vue.</strong> Also an expert in
+        <strong>HTML, CSS, SQL</strong>, and various design tools such as <strong>Photoshop</strong>, <strong>Illustrator</strong>,
+        and <strong>InDesign</strong>. Possessing a strong marketing and advertising background,
+        aiming for a senior role to leverage my extensive experience in driving
+        efficient web system management, complemented by compelling visual
+        design and robust database solutions.
       </p>
     </div>
   </div>
