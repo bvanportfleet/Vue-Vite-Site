@@ -8,11 +8,11 @@
       <p>
         Certified full-stack developer with a specialization in
         <strong>React</strong> and <strong>Vue</strong> with over two decades of
-        expertise in website management, IIS server administration, and domain
-        name acquisitions, management, and domain transitions. Proficient in
-        SEO, secure certificate handling, and ADA compliance, with a strong
-        capability in transitioning old web applications to more modern Node.js
-        frameworks/libraries like
+        expertise in website management, <strong>IIS server administration</strong>, and <strong>Corporate domain
+        name acquisitions</strong>, management, and domain transitions. Proficient in
+        <strong>SEO</strong>, <strong>secure certificate handling</strong>, and <strong>ADA compliance</strong>, with a strong
+        capability in transitioning old web applications to more modern <strong>Node.js
+        frameworks/libraries</strong> like
         <strong>.NET, Angular, React, NextJS and Vue.</strong> Also an expert in
         <strong>HTML, CSS, SQL</strong>, and various design tools such as <strong>Photoshop</strong>, <strong>Illustrator</strong>,
         and <strong>InDesign</strong>. Possessing a strong marketing and advertising background,
