@@ -6,14 +6,11 @@ body {
 header {
   background: var(--primary-color);
   color: #fff;
-  padding: 10px 0;
+  padding: 10px;
   padding-bottom: 0px;
   text-align: center;
-  position: fixed;
   top: 0;
-  width: 100vw;
   margin-top: 0px;
-  /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
   background-image: linear-gradient(
     to bottom,
@@ -23,16 +20,14 @@ header {
 }
 
 main {
-  padding: 10rem 10rem 1rem 10rem;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .menu-container {
   background: var(--secondary-color);
   padding: 10px 10px;
   border-radius: 10px 10px 0px 0px;
-  width: 95%;
-  margin: 0px 20px 0px;
-  /* Horizontal offset, Vertical offset, Blur radius, Spread radius, Color */
+  margin: 0px 20px 0px 25px;
   box-shadow: 0px -2px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +44,6 @@ nav ul li {
   font-size: larger;
 }
 
-/* Use a more specific selector to target router-link elements */
 nav ul li .router-link {
   color: var(--link-color);
   padding: 5px 0px;
@@ -74,12 +68,11 @@ nav ul li .router-link::before {
 
 nav ul li .router-link:hover::before,
 nav ul li .router-link.active::before {
-  /* Add the same style for the active state */
   transform: scaleX(1);
 }
 
 .hamburger {
-  display: none;
+  display: none; /* Hide the hamburger menu by default */
   flex-direction: column;
   cursor: pointer;
   padding: 10px;
@@ -92,47 +85,23 @@ nav ul li .router-link.active::before {
   margin: 2px;
 }
 
-@media (max-width: 1400px) {
-  nav ul {
-    display: none;
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show the hamburger menu on smaller screens */
   }
 
-  nav ul li {
-    display: block;
-    padding: 20px 0;
-    font-size: 1.5rem;
+  nav ul {
+    display: none; /* Hide the horizontal menu */
   }
-  main {
-    padding: 10rem 1rem 1rem 1rem;
-  }
+
   .menu-visible {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: var(--primary-color);
-    animation: slideDown 0.3s ease-out;
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: none;
   }
-
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
-  }
-
-  .hamburger,
-  .menu-visible {
-    display: flex;
-  }
+ 
 }
 
 footer {
@@ -153,7 +122,7 @@ footer {
     <MyName name="Brian VanPortfleet" />
 
     <div class="menu-container">
-      <div class="hamburger" onclick="toggleMenu()">
+      <div class="hamburger" @click="toggleMenu">
         <div></div>
         <div></div>
         <div></div>
@@ -204,19 +173,17 @@ import MyName from "./components/Includes/MyName.vue";
 
 function toggleMenu() {
   const menu = document.getElementById("menu");
-  if (menu.classList.contains("menu-visible")) {
-    menu.classList.remove("menu-visible");
-  } else {
-    menu.classList.add("menu-visible");
-  }
+  menu.classList.toggle("menu-visible");
 }
 
-const menuLinks = document.querySelectorAll("#menu li a");
-
-menuLinks.forEach((link) => {
-  link.addEventListener("click", function () {
-    menuLinks.forEach((link) => link.classList.remove("active"));
-    this.classList.add("active");
+// Close the menu when a menu item is clicked
+const menuItems = document.querySelectorAll("#menu li a");
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    if (menu.classList.contains("menu-visible")) {
+      menu.classList.remove("menu-visible");
+    }
   });
 });
 </script>
