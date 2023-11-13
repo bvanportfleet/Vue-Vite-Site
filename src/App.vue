@@ -1,3 +1,33 @@
+<script setup>
+import MyName from "./components/Includes/MyName.vue";
+
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("menu-visible");
+}
+
+// Close the menu when a menu item is clicked
+const menuItems = document.querySelectorAll("#menu li a");
+menuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    if (menu.classList.contains("menu-visible")) {
+      menu.classList.remove("menu-visible");
+    }
+  });
+});
+// close the menu when a link is clicked
+const links = document.querySelectorAll(".router-link");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    if (menu.classList.contains("menu-visible")) {
+      menu.classList.remove("menu-visible");
+    }
+  });
+});
+</script>
+
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -178,33 +208,3 @@ footer {
     <p>Copyright © 2023</p>
   </footer>
 </template>
-
-<script setup>
-import MyName from "./components/Includes/MyName.vue";
-
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("menu-visible");
-}
-
-// Close the menu when a menu item is clicked
-const menuItems = document.querySelectorAll("#menu li a");
-menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const menu = document.getElementById("menu");
-    if (menu.classList.contains("menu-visible")) {
-      menu.classList.remove("menu-visible");
-    }
-  });
-});
-// close the menu when a link is clicked
-const links = document.querySelectorAll(".router-link");
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    const menu = document.getElementById("menu");
-    if (menu.classList.contains("menu-visible")) {
-      menu.classList.remove("menu-visible");
-    }
-  });
-});
-</script>

@@ -2,6 +2,19 @@
 const { userId } = defineProps(["userId"]);
 </script>
 
+<style>
+.contact-info {
+  font-style: italic;
+  font-weight: bold;
+}
+.card h2 {
+  margin-top: 0px !important;
+}
+.testimonial-text {
+  margin-top: 10px;
+}
+</style>
+
 <template>
   <h1>{{ userId }}'s Recommendations</h1>
 
@@ -98,16 +111,3 @@ const { userId } = defineProps(["userId"]);
     </p>
   </div>
 </template>
-
-<style>
-.contact-info {
-  font-style: italic;
-  font-weight: bold;
-}
-.card h2 {
-  margin-top: 0px !important;
-}
-.testimonial-text {
-  margin-top: 10px;
-}
-</style>

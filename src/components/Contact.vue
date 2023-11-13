@@ -1,3 +1,47 @@
+<script setup>
+import { ref } from "vue";
+
+const { userId } = defineProps(["userId"]);
+
+const formData = ref({
+  firstName: "",
+  lastName: "",
+  company: "",
+  phone: "",
+  email: "",
+  message: "",
+});
+
+const submitForm = () => {
+  console.log("Form Data:", formData.value);
+};
+
+const formatPhone = (event) => {
+  let input = event.target.value.replace(/\D/g, "").substring(0, 10); // Remove all non-digits and limit to 10
+
+  let formatted = "";
+  if (input.length > 0) {
+    formatted = "(" + input.substring(0, Math.min(3, input.length));
+  }
+  if (input.length > 3) {
+    formatted += ") " + input.substring(3, Math.min(6, input.length));
+  }
+  if (input.length > 6) {
+    formatted += "-" + input.substring(6, Math.min(10, input.length));
+  }
+
+  formData.value.phone = formatted;
+};
+
+const restrictInput = (event) => {
+  let char = event.key;
+  if (!/[\d\b]/.test(char)) {
+    // Allow only numbers and the backspace key
+    event.preventDefault();
+  }
+};
+</script>
+
 <style scoped>
 .card {
   max-width: 80%;
@@ -43,7 +87,7 @@ button {
 
 button:hover {
   background-color: var(--secondary-color);
-  box-shadow: 5px 0px 15px 10px rgba(255, 255, 255, 0.6); 
+  box-shadow: 5px 0px 15px 10px rgba(255, 255, 255, 0.6);
 }
 .card {
   margin: 0 auto; /* Center horizontally */
@@ -127,47 +171,3 @@ button:hover {
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const { userId } = defineProps(["userId"]);
-
-const formData = ref({
-  firstName: "",
-  lastName: "",
-  company: "",
-  phone: "",
-  email: "",
-  message: "",
-});
-
-const submitForm = () => {
-  console.log("Form Data:", formData.value);
-};
-
-const formatPhone = (event) => {
-  let input = event.target.value.replace(/\D/g, "").substring(0, 10); // Remove all non-digits and limit to 10
-
-  let formatted = "";
-  if (input.length > 0) {
-    formatted = "(" + input.substring(0, Math.min(3, input.length));
-  }
-  if (input.length > 3) {
-    formatted += ") " + input.substring(3, Math.min(6, input.length));
-  }
-  if (input.length > 6) {
-    formatted += "-" + input.substring(6, Math.min(10, input.length));
-  }
-
-  formData.value.phone = formatted;
-};
-
-const restrictInput = (event) => {
-  let char = event.key;
-  if (!/[\d\b]/.test(char)) {
-    // Allow only numbers and the backspace key
-    event.preventDefault();
-  }
-};
-</script>
