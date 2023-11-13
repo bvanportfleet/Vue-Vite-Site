@@ -4,7 +4,7 @@
       <img src="../assets/IMG_5960.jpg" width="350" />
     </div>
     <div class="grid-item">
-      <h1 style="">Brian VanPortfleet</h1>
+      <h1>About Me</h1>
       <div class="card">
         Certified full-stack developer with a specialization in
         <strong>React</strong> and <strong>Vue</strong> with over two decades of
