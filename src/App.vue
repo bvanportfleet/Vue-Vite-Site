@@ -20,7 +20,7 @@ header {
 }
 
 main {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 5rem 1rem 5rem;
 }
 
 .menu-container {
@@ -101,7 +101,6 @@ nav ul li .router-link.active::before {
     background-color: var(--secondary-color);
     box-shadow: none;
   }
- 
 }
 
 footer {
