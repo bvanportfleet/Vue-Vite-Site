@@ -36,6 +36,10 @@ body {
   color:#3a3a3a;
   background-color: rgb(224, 244, 251);
   line-height: 1.8em;
+  background-image: url('assets/v.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 h1, h2, h3{

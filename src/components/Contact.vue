@@ -1,7 +1,8 @@
 <style scoped>
 .card {
-  max-width: 60%;
+  max-width: 80%;
 }
+
 .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -42,6 +43,7 @@ button {
 
 button:hover {
   background-color: var(--secondary-color);
+  box-shadow: 5px 0px 15px 10px rgba(255, 255, 255, 0.6); 
 }
 .card {
   margin: 0 auto; /* Center horizontally */

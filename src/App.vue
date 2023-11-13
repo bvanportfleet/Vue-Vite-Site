@@ -27,7 +27,7 @@ main {
   background: var(--secondary-color);
   padding: 10px 10px;
   border-radius: 10px 10px 0px 0px;
-  margin: 0px 20px 0px 25px;
+  margin: 0rem 4rem 0rem 4rem;
   box-shadow: 0px -2px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -84,25 +84,6 @@ nav ul li .router-link.active::before {
   background: #fff;
   margin: 2px;
 }
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* Show the hamburger menu on smaller screens */
-  }
-
-  nav ul {
-    display: none; /* Hide the horizontal menu */
-  }
-
-  .menu-visible {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--secondary-color);
-    box-shadow: none;
-  }
-}
-
 footer {
   background: var(--primary-color);
   color: #fff;
@@ -113,6 +94,37 @@ footer {
     var(--primary-color),
     rgb(2, 108, 136)
   );
+}
+
+@media (max-width: 875px) {
+  .hamburger {
+    display: flex; /* Show the hamburger menu on smaller screens */
+  }
+  main {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .menu-container {
+    padding: 0px 0px;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+  nav {
+    margin: 0px 10px;
+  }
+  nav ul {
+    display: none; /* Hide the horizontal menu */
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-visible {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: var(--secondary-color);
+    box-shadow: none;
+  }
 }
 </style>
 
@@ -179,6 +191,16 @@ function toggleMenu() {
 const menuItems = document.querySelectorAll("#menu li a");
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    if (menu.classList.contains("menu-visible")) {
+      menu.classList.remove("menu-visible");
+    }
+  });
+});
+// close the menu when a link is clicked
+const links = document.querySelectorAll(".router-link");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
     const menu = document.getElementById("menu");
     if (menu.classList.contains("menu-visible")) {
       menu.classList.remove("menu-visible");
