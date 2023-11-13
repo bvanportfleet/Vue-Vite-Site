@@ -1,5 +1,7 @@
 <style scoped>
-/* Apply styles to enhance form appearance */
+.card {
+  max-width: 60%;
+}
 .form-group {
   margin-bottom: 20px;
   display: flex;
