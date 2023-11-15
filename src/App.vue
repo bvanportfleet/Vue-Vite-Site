@@ -34,6 +34,7 @@ body {
 }
 
 header {
+  position: sticky;
   background: var(--primary-color);
   color: #fff;
   padding: 10px;
