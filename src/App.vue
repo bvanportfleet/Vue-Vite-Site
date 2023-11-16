@@ -128,6 +128,10 @@ footer {
 }
 
 @media (max-width: 875px) {
+
+  header {
+  position: relative;
+  }
   .hamburger {
     display: flex; /* Show the hamburger menu on smaller screens */
   }
