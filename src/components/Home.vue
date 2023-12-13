@@ -58,7 +58,7 @@ h1 {
         <strong>InDesign</strong>. Possessing a strong marketing and advertising
         background, aiming for a senior role to leverage my extensive experience
         in driving efficient web system management, complemented by compelling
-        visual design and robust database solutions...
+        visual design and robust database solutions.
       </div>
     </div>
   </div>
