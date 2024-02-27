@@ -128,9 +128,8 @@ footer {
 }
 
 @media (max-width: 875px) {
-
   header {
-  position: relative;
+    position: relative;
   }
   .hamburger {
     display: flex; /* Show the hamburger menu on smaller screens */
@@ -210,6 +209,6 @@ footer {
   </main>
 
   <footer>
-    <p>Copyright © 2023</p>
+    <p>Copyright © 2024</p>
   </footer>
 </template>
