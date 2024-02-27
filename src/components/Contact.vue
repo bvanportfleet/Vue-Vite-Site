@@ -66,6 +66,7 @@ input[type="tel"],
 input[type="email"],
 textarea {
   background-color: #fff;
+  color: black;
   padding: 10px;
   font-family: "Franklin Gothic light", "Arial Narrow", Arial, sans-serif;
   border: 1px solid #ccc;
