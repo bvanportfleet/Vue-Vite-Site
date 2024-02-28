@@ -209,6 +209,6 @@ footer {
   </main>
 
   <footer>
-    <p>Copyright © 2024</p>
+    <p>Copyright © 2024 Site built with Vue.Js</p>
   </footer>
 </template>
