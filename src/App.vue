@@ -203,8 +203,7 @@ footer {
     </div>
   </header>
   <main>
-    <!-- <h2>About Brian VanPortfleet</h2> -->
-    <!-- <HelloWorld msg="Hey dude"/> -->
+
     <router-view />
   </main>
 
